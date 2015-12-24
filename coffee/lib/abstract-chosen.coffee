@@ -283,15 +283,15 @@ class AbstractChosen
 
   @browser_is_supported: ->
     if /iP(od|hone)/i.test(window.navigator.userAgent)
-      return false
+      return true
     if /Android/i.test(window.navigator.userAgent)
-      return false if /Mobile/i.test(window.navigator.userAgent)
+      return true if /Mobile/i.test(window.navigator.userAgent)
     if /IEMobile/i.test(window.navigator.userAgent)
-      return false
+      return true
     if /Windows Phone/i.test(window.navigator.userAgent)
-      return false
+      return true
     if /BlackBerry/i.test(window.navigator.userAgent)
-      return false
+      return true
     if /BB10/i.test(window.navigator.userAgent)
       return false
     if window.navigator.appName is "Microsoft Internet Explorer"
